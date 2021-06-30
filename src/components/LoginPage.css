@@ -1,0 +1,35 @@
+.loginpage-container {
+  /* background-color: #128c7e; */
+  background-color: #dadbd3;
+
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginpage-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.loginpage-component > img {
+  padding: 20px;
+  height: 200px;
+  width: 200px;
+}
+.loginpage-component > button {
+  height: 40px;
+  width: 180px;
+  margin-top: 50px;
+  background: teal;
+  color: white;
+  outline: none;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}

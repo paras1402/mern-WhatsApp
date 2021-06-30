@@ -7,11 +7,23 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 import { SearchOutlined } from "@material-ui/icons";
 import { Avatar, IconButton } from "@material-ui/core";
 import SidebarChat from "./SidebarChat";
+import { useSelector } from "react-redux";
+import { selectUser } from "../features/userSlice";
+import { auth } from "../firebase";
 const Sidebar = () => {
+  const user = useSelector(selectUser);
+
+  const logoutHandler = () => {
+    auth.signOut();
+  };
   return (
     <div className="sidebar">
       <div className="sidebar__header">
-        <Avatar src="https://cdn.britannica.com/62/182362-050-BD31B42D/Scarlett-Johansson-Black-Widow-Chris-Hemsworth-Thor.jpg"></Avatar>
+        <Avatar
+          className="sidebar__headerAvatar"
+          onClick={logoutHandler}
+          src={user?.photo}
+        ></Avatar>
         <div className="sidebar__headerRight">
           <IconButton>
             <DonutLargeIcon />

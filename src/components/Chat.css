@@ -51,6 +51,9 @@
   background-color: #fff;
   margin-bottom: 30px;
   width: fit-content;
+  display: flex;
+  max-width: 50vw;
+  /* flex-wrap: wrap; */
 }
 .chat__timestamp {
   margin-left: 10px;
@@ -92,6 +95,8 @@
   border-radius: 30px;
   outline: none;
   border: none;
+  overflow-wrap: anywhere;
+
   padding: 10px;
   flex: 1;
 }
@@ -102,4 +107,9 @@
 .chat__footer > .MuiSvgIcon-root {
   padding: 10px;
   color: gray;
+}
+
+.chat__message__text {
+  max-width: inherit;
+  overflow-wrap: anywhere;
 }

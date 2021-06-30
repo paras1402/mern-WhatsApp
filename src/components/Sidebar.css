@@ -13,6 +13,9 @@
   border-right: 1px solid lightgray;
 }
 
+.sidebar__headerAvatar {
+  cursor: pointer;
+}
 .sidebar__headerRight {
   display: flex;
   align-items: center;
