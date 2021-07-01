@@ -37,6 +37,10 @@
   background-repeat: repeat;
   padding: 30px;
   overflow: scroll;
+  display: flex;
+  flex-direction: column;
+
+  overflow: scroll;
 }
 
 .chat__body::-webkit-scrollbar {
@@ -65,6 +69,7 @@
   top: -15px;
   font-weight: 800;
   font-size: xx-small;
+  width: max-content;
 }
 
 .chat__reciever {
@@ -95,7 +100,6 @@
   border-radius: 30px;
   outline: none;
   border: none;
-  overflow-wrap: anywhere;
 
   padding: 10px;
   flex: 1;

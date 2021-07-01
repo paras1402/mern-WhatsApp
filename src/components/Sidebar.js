@@ -10,7 +10,7 @@ import SidebarChat from "./SidebarChat";
 import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
 import { auth } from "../firebase";
-const Sidebar = () => {
+const Sidebar = ({ rooms }) => {
   const user = useSelector(selectUser);
 
   const logoutHandler = () => {
@@ -43,10 +43,13 @@ const Sidebar = () => {
         </div>
       </div>
       <div className="sidebar__chats">
+        <SidebarChat addNewChat={true} />
+        {rooms.map((room) => (
+          <SidebarChat room={room}></SidebarChat>
+        ))}
+        {/* <SidebarChat />
         <SidebarChat />
-        <SidebarChat />
-        <SidebarChat />
-        <SidebarChat />
+        <SidebarChat /> */}
       </div>
     </div>
   );
